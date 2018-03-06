@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
   
     }
-
-
+    @IBAction func beginButtonPushed(_ sender: UIButton) {
+        performSegue(withIdentifier: "resultSegue", sender: nil)
+    }
+    
 
 }
 
