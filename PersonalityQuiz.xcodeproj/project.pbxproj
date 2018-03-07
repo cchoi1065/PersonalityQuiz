@@ -14,6 +14,7 @@
 		A0839E3820471D36004BB217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0839E3620471D36004BB217 /* LaunchScreen.storyboard */; };
 		A08BC0A9204DB0E9001B8D60 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC0A8204DB0E9001B8D60 /* ResultsViewController.swift */; };
 		A08BC0AB204DB10D001B8D60 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BC0AA204DB10D001B8D60 /* QuestionsViewController.swift */; };
+		A0E01308204F0A89006E96BA /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E01307204F0A89006E96BA /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A0839E3920471D36004BB217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08BC0A8204DB0E9001B8D60 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		A08BC0AA204DB10D001B8D60 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		A0E01307204F0A89006E96BA /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				A0839E2D20471D36004BB217 /* AppDelegate.swift */,
 				A0839E2F20471D36004BB217 /* ViewController.swift */,
 				A0839E3120471D36004BB217 /* Main.storyboard */,
+				A0E01307204F0A89006E96BA /* Questions.swift */,
 				A08BC0AA204DB10D001B8D60 /* QuestionsViewController.swift */,
 				A08BC0A8204DB0E9001B8D60 /* ResultsViewController.swift */,
 				A0839E3420471D36004BB217 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				A0839E3020471D36004BB217 /* ViewController.swift in Sources */,
 				A0839E2E20471D36004BB217 /* AppDelegate.swift in Sources */,
 				A08BC0AB204DB10D001B8D60 /* QuestionsViewController.swift in Sources */,
+				A0E01308204F0A89006E96BA /* Questions.swift in Sources */,
 				A08BC0A9204DB0E9001B8D60 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
