@@ -10,6 +10,12 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    @IBOutlet weak var singleStackedView: UIStackView!
+    @IBOutlet weak var multipleStackedView: UIStackView!
+    @IBOutlet weak var rangedStackedView: UIStackView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var questionLabel: UILabel!
+
     
     var questionIndex = 0
     var questions: [Question] = [

@@ -97,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-oP-lwr">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-oP-lwr">
                                 <rect key="frame" x="20" y="233" width="46" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -119,7 +119,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="K5W-B4-q1S">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="K5W-B4-q1S">
                                 <rect key="frame" x="30" y="264" width="315" height="235"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Was-fy-eU0">
@@ -185,22 +185,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-eH-QMs">
-                                <rect key="frame" x="20" y="298.5" width="178" height="70.5"/>
+                                <rect key="frame" x="20" y="298.5" width="182" height="70.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-aa-qOz">
-                                        <rect key="frame" x="-2" y="0.0" width="182" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="186" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-pd-lOX">
-                                        <rect key="frame" x="0.0" y="50" width="178" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="182" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-LS-S9q">
-                                                <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-hw-UPE">
-                                                <rect key="frame" x="89" y="0.0" width="89" height="20.5"/>
+                                                <rect key="frame" x="91" y="0.0" width="91" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -231,16 +231,14 @@
                             <constraint firstItem="Oae-xP-hdK" firstAttribute="trailing" secondItem="dUb-DH-n3w" secondAttribute="trailing" constant="20" id="z71-ud-M5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oae-xP-hdK"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ta3-oP-lwr"/>
-                                <exclude reference="K5W-B4-q1S"/>
-                                <exclude reference="h4P-eH-QMs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wfp-lV-uuW"/>
                     <connections>
+                        <outlet property="multipleStackedView" destination="K5W-B4-q1S" id="6en-9Y-nv7"/>
+                        <outlet property="progressView" destination="s7t-qe-efL" id="nD5-rv-frZ"/>
+                        <outlet property="questionLabel" destination="dUb-DH-n3w" id="Eja-3I-0O4"/>
+                        <outlet property="rangedStackedView" destination="h4P-eH-QMs" id="XoT-T7-ksz"/>
+                        <outlet property="singleStackedView" destination="ta3-oP-lwr" id="pZv-VX-PbE"/>
                         <segue destination="V6t-cJ-YDf" kind="show" id="CQ5-mG-g2T"/>
                     </connections>
                 </viewController>
