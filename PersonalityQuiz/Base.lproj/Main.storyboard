@@ -82,7 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="Ueh-PX-RHF" kind="show" identifier="resultSegue" id="dCl-Xy-kIo"/>
+                        <segue destination="Ueh-PX-RHF" kind="show" identifier="initialSegue" id="dCl-Xy-kIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-oP-lwr">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-oP-lwr">
                                 <rect key="frame" x="20" y="233" width="46" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -185,22 +185,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-eH-QMs">
-                                <rect key="frame" x="20" y="298.5" width="182" height="70.5"/>
+                                <rect key="frame" x="20" y="298.5" width="194" height="70.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-aa-qOz">
-                                        <rect key="frame" x="-2" y="0.0" width="186" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="198" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-pd-lOX">
-                                        <rect key="frame" x="0.0" y="50" width="182" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="194" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-LS-S9q">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-hw-UPE">
-                                                <rect key="frame" x="91" y="0.0" width="91" height="20.5"/>
+                                                <rect key="frame" x="97" y="0.0" width="97" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -234,12 +234,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="wfp-lV-uuW"/>
                     <connections>
+                        <outlet property="button1SingleStacked" destination="B90-nB-Dgg" id="lPM-o3-5n9"/>
+                        <outlet property="button2SingleStacked" destination="dNp-Gt-D3J" id="ajk-lf-rTy"/>
+                        <outlet property="button3SingleStacked" destination="SQf-Jm-udH" id="Iud-Gn-Kys"/>
+                        <outlet property="button4SingleStacked" destination="dOO-5Z-G6k" id="wry-wP-uaI"/>
+                        <outlet property="buttonSubmitMultiple" destination="Jsw-5k-blE" id="95z-Iv-XC0"/>
+                        <outlet property="label1Multiple" destination="QDE-Zc-Maw" id="h9d-Ta-4bo"/>
+                        <outlet property="label1Ranged" destination="nRn-LS-S9q" id="FFQ-hN-QJ1"/>
+                        <outlet property="label2Multiple" destination="s91-Ex-dYW" id="TlK-3W-0iI"/>
+                        <outlet property="label2Ranged" destination="aVJ-hw-UPE" id="qhK-I5-TNp"/>
+                        <outlet property="label3Multiple" destination="c5k-N4-1R7" id="B2c-HU-OhT"/>
+                        <outlet property="label4Multiple" destination="Rad-3d-aU5" id="afF-oL-lOV"/>
                         <outlet property="multipleStackedView" destination="K5W-B4-q1S" id="6en-9Y-nv7"/>
                         <outlet property="progressView" destination="s7t-qe-efL" id="nD5-rv-frZ"/>
                         <outlet property="questionLabel" destination="dUb-DH-n3w" id="Eja-3I-0O4"/>
                         <outlet property="rangedStackedView" destination="h4P-eH-QMs" id="XoT-T7-ksz"/>
                         <outlet property="singleStackedView" destination="ta3-oP-lwr" id="pZv-VX-PbE"/>
-                        <segue destination="V6t-cJ-YDf" kind="show" id="CQ5-mG-g2T"/>
+                        <outlet property="sliderRanged" destination="h2G-aa-qOz" id="7EK-bx-hJC"/>
+                        <outlet property="switch1Multiple" destination="BXF-gk-GjA" id="652-ig-nw3"/>
+                        <outlet property="switch2Multiple" destination="EQ0-pm-McZ" id="FOc-Va-kGO"/>
+                        <outlet property="switch3Multiple" destination="GOB-Kv-a1b" id="6hY-80-54J"/>
+                        <outlet property="switch4Multiple" destination="xD0-w3-pWA" id="z1A-8k-8o8"/>
+                        <segue destination="V6t-cJ-YDf" kind="show" identifier="resultSegue" id="CQ5-mG-g2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EH-iG-nVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
