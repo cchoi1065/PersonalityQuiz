@@ -9,6 +9,9 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
+    
+    var answerChosen: [Answer] = []
+    
 
     @IBOutlet weak var singleStackedView: UIStackView!
     @IBOutlet weak var multipleStackedView: UIStackView!
@@ -124,6 +127,31 @@ class QuestionsViewController: UIViewController {
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
+    
+    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+    let currentAnswers = questions[questionIndex].answers
+        
+        switch sender {
+        case button1SingleStacked:
+            answerChosen.append(currentAnswers[0])
+            
+        case button2SingleStacked:
+            answerChosen.append(currentAnswers[1])
+            
+        case button3SingleStacked:
+            answerChosen.append(currentAnswers[2])
+            
+        case button4SingleStacked:
+            answerChosen.append(currentAnswers[3])
+            
+        default:
+            break
+        }
+    
+    
+    
+    }
+    
         
 }
 
