@@ -130,7 +130,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="K5W-B4-q1S">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="K5W-B4-q1S">
                                 <rect key="frame" x="30" y="264" width="315" height="235"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Was-fy-eU0">
@@ -193,7 +193,7 @@
                                         <rect key="frame" x="0.0" y="204" width="315" height="31"/>
                                         <state key="normal" title="Submit Answer"/>
                                         <connections>
-                                            <action selector="multipleAnswerButtonPressed" destination="GcG-lH-ej8" eventType="touchUpInside" id="1mo-nr-CEj"/>
+                                            <action selector="multipleAnswerButtonPressed" destination="GcG-lH-ej8" eventType="touchUpInside" id="JLu-sY-auG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -204,28 +204,37 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-eH-QMs">
-                                <rect key="frame" x="20" y="298.5" width="210" height="70.5"/>
+                                <rect key="frame" x="20" y="272.5" width="278" height="123.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-aa-qOz">
-                                        <rect key="frame" x="-2" y="0.0" width="214" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="282" height="31"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-pd-lOX">
-                                        <rect key="frame" x="0.0" y="50" width="210" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="278" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRn-LS-S9q">
-                                                <rect key="frame" x="0.0" y="0.0" width="105" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-hw-UPE">
-                                                <rect key="frame" x="105" y="0.0" width="105" height="20.5"/>
+                                                <rect key="frame" x="139" y="0.0" width="139" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIZ-wP-mJA">
+                                        <rect key="frame" x="0.0" y="90.5" width="278" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="GcG-lH-ej8" eventType="touchUpInside" id="Ai9-7l-0WM"/>
+                                            <action selector="rangedAnswerButtonPressed" destination="GcG-lH-ej8" eventType="touchUpInside" id="k2u-5B-aAZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUb-DH-n3w">
@@ -255,7 +264,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ta3-oP-lwr"/>
-                                <exclude reference="h4P-eH-QMs"/>
+                                <exclude reference="K5W-B4-q1S"/>
                             </mask>
                         </variation>
                     </view>

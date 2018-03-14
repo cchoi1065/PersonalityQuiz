@@ -109,6 +109,10 @@ class QuestionsViewController: UIViewController {
         
         func updateMultipleStack(using answers: [Answer]) {
            multipleStackedView.isHidden = false
+            switch1Multiple.isOn = false
+            switch2Multiple.isOn = false
+            switch3Multiple.isOn = false
+            switch4Multiple.isOn = false
             label1Multiple.text = answers[0].text
             label2Multiple.text = answers[1].text
             label3Multiple.text = answers[2].text
@@ -116,6 +120,7 @@ class QuestionsViewController: UIViewController {
         }
         func updateRangedStack(using answers: [Answer]) {
             rangedStackedView.isHidden = false
+            sliderRanged.setValue(0.5, animated: false)
             label1Ranged.text = answers.first?.text
             label2Ranged.text = answers.last?.text
         }
@@ -127,6 +132,11 @@ class QuestionsViewController: UIViewController {
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
+    
+    
+    
+    
+    
     
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
     let currentAnswers = questions[questionIndex].answers
@@ -147,11 +157,13 @@ class QuestionsViewController: UIViewController {
         default:
             break
         }
+        
 
     }
     
+    
     @IBAction func multipleAnswerButtonPressed() {
-        let currentAnswers = questions[questionIndex].answers
+    let currentAnswers = questions[questionIndex].answers
         
         if switch1Multiple.isOn {
             answerChosen.append(currentAnswers[0])
@@ -167,7 +179,15 @@ class QuestionsViewController: UIViewController {
         }
     }
     
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        let index = Int(round(sliderRanged.value * Float(currentAnswers.count - 1)))
+        answerChosen.append(currentAnswers[index])
         
+        nextQuestion()
+    }
+    
+
 }
 
 
