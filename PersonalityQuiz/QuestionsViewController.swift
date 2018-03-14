@@ -147,9 +147,24 @@ class QuestionsViewController: UIViewController {
         default:
             break
         }
+
+    }
     
-    
-    
+    @IBAction func multipleAnswerButtonPressed() {
+        let currentAnswers = questions[questionIndex].answers
+        
+        if switch1Multiple.isOn {
+            answerChosen.append(currentAnswers[0])
+        }
+        if switch2Multiple.isOn {
+            answerChosen.append(currentAnswers[1])
+        }
+        if switch3Multiple.isOn {
+            answerChosen.append(currentAnswers[2])
+        }
+        if switch4Multiple.isOn {
+            answerChosen.append(currentAnswers[3])
+        }
     }
     
         
